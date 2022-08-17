@@ -58,40 +58,41 @@ you mosquitto_sub terminal should show this message.
 
 https://pimylifeup.com/raspberry-pi-influxdb/
 
-curl https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
+$ curl https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
 
-echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+$ echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 
-sudo apt update
+$ sudo apt update
 
-sudo apt install influxdb
+$ sudo apt install influxdb
 
-sudo systemctl unmask influxdb
-sudo systemctl enable influxdb
+$ sudo systemctl unmask influxdb
+$ sudo systemctl enable influxdb
 
 sudo systemctl start influxdb
 
 https://www.superhouse.tv/41-datalogging-with-mqtt-node-red-influxdb-and-grafana/
 
-influx
+$ influx
+
 CREATE USER admin WITH PASSWORD 'adminpassword' WITH ALL PRIVILEGES
 exit
 
-sudo nano /etc/influxdb/influxdb.conf
+$ sudo nano /etc/influxdb/influxdb.conf
 
 - Press CTRL+W to search for the section called [HTTP].
 
-'''
+```
 auth-enabled = true
 pprof-enabled = true
 pprof-auth-enabled = true
 ping-auth-enabled = true
-'''
+```
 
-sudo systemctl restart influxdb
+$ sudo systemctl restart influxdb
 
-influx -username admin -password adminpassword
-CREATE DATABASE sensors
+$ influx -username admin -password adminpassword
+CREATE DATABASE temperature
 exit
 
 
