@@ -108,6 +108,8 @@ $ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/ma
 
 $ npm install node-red-contrib-influxdb
 
+$ sudo systemctl enable nodered.service
+
 # Grafana
 
 $ wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
