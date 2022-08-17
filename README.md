@@ -67,6 +67,7 @@ $ sudo apt update
 $ sudo apt install influxdb
 
 $ sudo systemctl unmask influxdb
+
 $ sudo systemctl enable influxdb
 
 sudo systemctl start influxdb
@@ -76,6 +77,7 @@ https://www.superhouse.tv/41-datalogging-with-mqtt-node-red-influxdb-and-grafana
 $ influx
 
 CREATE USER admin WITH PASSWORD 'adminpassword' WITH ALL PRIVILEGES
+
 exit
 
 $ sudo nano /etc/influxdb/influxdb.conf
@@ -92,7 +94,9 @@ ping-auth-enabled = true
 $ sudo systemctl restart influxdb
 
 $ influx -username admin -password adminpassword
+
 CREATE DATABASE temperature
+
 exit
 
 
