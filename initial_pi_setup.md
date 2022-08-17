@@ -3,7 +3,7 @@ $ sudo nano /etc/systemd/timesyncd.conf
 
 *Edit the file and add:*
 
-NTP=ntp.ufs.ac.za    (*change this to some appropriate*)
+NTP=ntp.ufs.ac.za    (*change this to something appropriate*)
 
 
 $ sudo timedatectl set-ntp false
