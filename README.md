@@ -40,6 +40,20 @@ include_dir /etc/mosquitto/conf.d
 
 $ sudo /etc/init.d/mosquitto restart
 
+**Test local**
+
+Open two terminals on the Pi on one
+
+$ mosquitto_sub -u mqtt_username -P mqtt_password -v -t "#"
+
+This will listen for everything
+
+in the other
+
+$ mosquitto_pub -t test -m message_from_sensor
+
+you mosquitto_sub terminal should show this message.
+
 ## InfluxDB
 
 https://pimylifeup.com/raspberry-pi-influxdb/
