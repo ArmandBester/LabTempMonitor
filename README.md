@@ -125,6 +125,12 @@ $ sudo systemctl enable grafana-server
 $ sudo systemctl start grafana-server
 
 
+# Firewall rules
 
+$ iptables -A FORWARD -i eth0 -p tcp -m tcp --dport 8088 -j ACCEPT
+
+$ iptables -A FORWARD -i eth0 -p tcp -m tcp --dport 1880 -j ACCEPT
+
+$ iptables-save > /etc/iptables/rules.v4
 
 
