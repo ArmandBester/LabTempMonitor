@@ -4,29 +4,25 @@ From: https://www.superhouse.tv/41-datalogging-with-mqtt-node-red-influxdb-and-g
 
 ## Mosquitto
 
-sudo apt update
+$ sudo apt update
 
-sudo apt upgrade
+$ sudo apt upgrade
 
-sudo apt install mosquitto mosquitto-clients
+$ sudo apt install mosquitto mosquitto-clients
 
-echo "mqtt_username:mqtt_password" > pwfile
+$ echo "mqtt_username:mqtt_password" > pwfile
 
-cat pwfile
+$ cat pwfile
 
-mosquitto_passwd -U pwfile
+$ mosquitto_passwd -U pwfile
 
-cat pwfile
+$ cat pwfile
 
-sudo mv pwfile /etc/mosquitto/
+$ sudo mv pwfile /etc/mosquitto/
 
-sudo nano /etc/mosquitto/mosquitto.conf
+$ sudo nano /etc/mosquitto/mosquitto.conf
 
 '''
-#Place your local configuration in /etc/mosquitto/conf.d/
-
-# A full description of the configuration file is at
-# /usr/share/doc/mosquitto/examples/mosquitto.conf.example
 per_listener_settings true
 
 pid_file /run/mosquitto/mosquitto.pid
@@ -41,6 +37,8 @@ password_file /etc/mosquitto/pwfile
 
 include_dir /etc/mosquitto/conf.d
 '''
+
+$ sudo /etc/init.d/mosquitto restart
 
 ## InfluxDB
 
