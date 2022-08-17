@@ -102,11 +102,11 @@ exit
 
 # Node-Red
 
-sudo apt install build-essential git
+$ sudo apt install build-essential git
 
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+$ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 
-npm install node-red-contrib-influxdb
+$ npm install node-red-contrib-influxdb
 
 # Grafana
 
