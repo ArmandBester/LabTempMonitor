@@ -42,11 +42,11 @@ $ sudo /etc/init.d/mosquitto restart
 
 **Test local**
 
-Open two terminals on the Pi on one
+*Open two terminals. On one terminal*
 
 $ mosquitto_sub -u mqtt_username -P mqtt_password -v -t "#"
 
-This will listen for everything
+*This will listen for everything*
 
 in the other
 
