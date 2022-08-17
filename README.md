@@ -5,11 +5,14 @@ From: https://www.superhouse.tv/41-datalogging-with-mqtt-node-red-influxdb-and-g
 ## Mosquitto
 
 sudo apt update
+
 sudo apt upgrade
 
 sudo apt install mosquitto mosquitto-clients
 
 echo "mqtt_username:mqtt_password" > pwfile
+
+cat pwfile
 
 mosquitto_passwd -U pwfile
 
@@ -20,9 +23,8 @@ sudo mv pwfile /etc/mosquitto/
 sudo nano /etc/mosquitto/mosquitto.conf
 
 '''
-pi@raspberrypi:~ $ cat /etc/mosquitto/mosquitto.conf 
-# Place your local configuration in /etc/mosquitto/conf.d/
-#
+#Place your local configuration in /etc/mosquitto/conf.d/
+
 # A full description of the configuration file is at
 # /usr/share/doc/mosquitto/examples/mosquitto.conf.example
 per_listener_settings true
