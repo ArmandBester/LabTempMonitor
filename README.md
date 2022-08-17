@@ -42,7 +42,7 @@ $ sudo /etc/init.d/mosquitto restart
 
 **Test local**
 
-*Open two terminals. On one terminal*
+*Open two terminals. In one terminal*
 
 $ mosquitto_sub -u mqtt_username -P mqtt_password -v -t "#"
 
@@ -52,7 +52,7 @@ in the other
 
 $ mosquitto_pub -t test -m message_from_sensor
 
-you mosquitto_sub terminal should show this message.
+*you mosquitto_sub terminal should show this message.*
 
 ## InfluxDB
 
@@ -123,14 +123,6 @@ $ sudo apt install grafana
 $ sudo systemctl enable grafana-server
 
 $ sudo systemctl start grafana-server
-
-
-
-
-
-
-
-
 
 
 
