@@ -22,7 +22,7 @@ $ sudo mv pwfile /etc/mosquitto/
 
 $ sudo nano /etc/mosquitto/mosquitto.conf
 
-'''
+```
 per_listener_settings true
 
 pid_file /run/mosquitto/mosquitto.pid
@@ -36,7 +36,7 @@ allow_anonymous false
 password_file /etc/mosquitto/pwfile
 
 include_dir /etc/mosquitto/conf.d
-'''
+```
 
 $ sudo /etc/init.d/mosquitto restart
 
