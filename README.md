@@ -52,6 +52,10 @@ in the other
 
 $ mosquitto_pub -t test -m message_from_sensor
 
+or remote 
+
+mosquitto_pub -t test -m message_from_sensor -u mqtt_username -P mqtt_password -h 192.168.42.1 -p 1883
+
 *you mosquitto_sub terminal should show this message.*
 
 ## InfluxDB
